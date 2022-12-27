@@ -7,12 +7,11 @@ public class Main {
     public static boolean isPalindrom(String text) {
         text = text.replace(" ", "");
         text = text.toLowerCase();
-        boolean palindrom = true;
         for (int i = 0; i < text.length()/2; i++) {
             if (text.charAt(i) != text.charAt(text.length() - 1 - i)) {
-                palindrom = false;
+                return false;
             }
         }
-        return palindrom;
+        return true;
     }
 }
